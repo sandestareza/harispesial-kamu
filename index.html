@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.8/sweetalert2.min.js" integrity="sha512-7x7HoEikRZhV0FAORWP+hrUzl75JW/uLHBbg2kHnPdFmScpIeHY0ieUVSacjusrKrlA/RsA2tDOBvisFmKc3xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.8/sweetalert2.min.css" integrity="sha512-y4S4cBeErz9ykN3iwUC4kmP/Ca+zd8n8FDzlVbq5Nr73gn1VBXZhpriQ7avR+8fQLpyq4izWm0b8s6q4Vedb9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="context ">
+        <div class="card mb-5 bg-t shadow border-0" style="max-height: 25em; overflow-y: scroll;">
+            <div class="card-body">
+              <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_bfwzjr7h.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; margin: 0 auto;"  loop  autoplay></lottie-player>
+              <p class="text-center mt-5">Scroll ke bawah ya</p>
+              <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_wsyyln4p.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px; margin: 0 auto;"  loop  autoplay></lottie-player>
+                <br />
+                <br />
+                <br />
+                <div class="card text-center shadow border-0 mb-5 scroll">
+                  <div class="card-body">
+                    <h1>Hey Syang</h1>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="card text-center shadow border-0 mb-5 scroll">
+                  <div class="card-body">
+                    <h1>Ciyeeee</h1>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="card text-center shadow border-0 mb-5 scroll">
+                  <div class="card-body">
+                    <h1>Yang hari ini ulang tahun</h1>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="card text-center shadow border-0 mb-5 scroll">
+                  <div class="card-body">
+                    <h1>“Yaumul milad, barakallah fii umrik".</h1>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="card text-center shadow border-0 mb-5 scroll">
+                  <div class="card-body">
+                    <h1>“Sehat Selalu".</h1>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="card text-center shadow border-0 mb-5 scroll">
+                  <div class="card-body">
+                    <h1>“Semoga semua yang diimpikan tercapai".</h1>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="card text-center shadow border-0">
+                  <div class="card-body">
+                    <h1>“Amiin".</h1>
+                  </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <p class="text-center">Coba dd pencet tombol love nya</p>
+                <button class="btn btn-sm text-center p-0 w-100" onclick="showalert()">
+                  <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_akccyuoz.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px; margin: 0 auto;"  loop  autoplay></lottie-player>
+                </button>
+            </div>
+        </div>
+    </div> 
+    
+
+    <!-- <div class="area" >
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div > -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <script>
+
+      async function showalert(){
+        const { value: text } = await Swal.fire({
+          input: 'textarea',
+          title: 'Dihari spesial ini dd pengin nya apa?',
+          inputPlaceholder: 'Tulis disini...',
+          inputAttributes: {
+            'aria-label': 'Tulis disini'
+          }
+        })
+
+        if (text) {
+          Swal.fire({
+            text:"Kirim ke ay jawabannya"
+          }).then(()=>{
+            window.location.href = `https://api.whatsapp.com/send?phone=6281532622042&text=${text}`
+
+          })
+        }
+      }
+      
+    </script>
+
+  </body>
+</html>
