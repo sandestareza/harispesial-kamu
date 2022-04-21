@@ -74,6 +74,13 @@
                     <h1>“Amiin".</h1>
                   </div>
                 </div>
+                <button class="btn btn-sm btn-outline-primary mt-5 w-100" onclick="myVideo()">Putar video ini dulu</button>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <br/>
                 <br/>
                 <br/>
@@ -105,6 +112,19 @@
 
 
     <script>
+
+      function myVideo() {
+        Swal.fire({
+          title: '<strong>Happy <u>Birthday</u></strong>',
+          html:
+            `<video controls autoplay width="100%">
+              <source src="img/movie.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>`,
+          showCloseButton: true,
+          customClass: 'swal-wide',
+        })
+      }
 
       async function showalert(){
         const { value: text } = await Swal.fire({
